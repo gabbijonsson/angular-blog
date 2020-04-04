@@ -7,10 +7,6 @@ div p {
     text-align: center;
 }
 
-.footer__issue {
-    margin: 5px;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -18,6 +14,10 @@ ul {
 
 li {
     list-style: none;
+}
+
+.footer__navigation {
+    padding-left: 50px;
 }
 
 .footer__copyright {

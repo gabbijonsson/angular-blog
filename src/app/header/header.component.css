@@ -1,0 +1,37 @@
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+.header__tab-group {
+    width: 80vw;
+    
+}
+
+.header__tabs {
+    padding: 0.5em 2em;
+}
+
+.header__tab {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.header__tab:hover {
+    font-weight: 1000;
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+}
+
+.selected {
+    background-color: gray;
+    text-align: center;
+    padding-left: 0;
+    color: white;
+    font-weight: 1000;
+}
