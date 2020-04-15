@@ -20,5 +20,14 @@ export const appRoutes: Routes = [
     {
         path: 'newpost',
         component: NewPostComponent
+    },
+    {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        redirectTo: '/home'
     }
 ]
