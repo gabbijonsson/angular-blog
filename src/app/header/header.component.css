@@ -28,7 +28,7 @@ ul {
     background-color: gray;
 }
 
-.selected {
+.active {
     background-color: gray;
     text-align: center;
     padding-left: 0;

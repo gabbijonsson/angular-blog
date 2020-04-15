@@ -1,0 +1,18 @@
+.form-container {
+    display: grid;
+    justify-content: center;
+}
+
+p {
+    display: inline;
+}
+
+.form-label {
+    font-size: 2em;
+}
+
+.form-validate-error {
+    font-size: 1em;
+    color: red;
+    font-weight: 700;
+}

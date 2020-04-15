@@ -1,0 +1,13 @@
+<div class="latest-article--post">
+
+    <ul>
+        <li *ngFor="let article of articles">
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.content.substring(0, 31) + '...'}}</p>
+            <button (click)="removeArticle(article.articleId)">REMOVE POST</button>
+        </li>
+    </ul>
+
+    
+</div>
+

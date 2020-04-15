@@ -1,0 +1,3 @@
+<ul>
+    <li *ngFor="let article of articles"><h1>{{ article.title }}</h1><button (click)="removeArticle(article.articleId)">REMOVE POST</button></li>
+</ul>

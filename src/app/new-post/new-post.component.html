@@ -1,0 +1,22 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit(postForm.value)" class="form-container">
+    <label for="title" class="form-title form-label">Title:</label>
+    <input id="title" formControlName="title" class="form-title form-input" required>
+    <p *ngIf="postForm.controls.title.touched && postForm.controls.title.hasError('minlength')" class="form-title form-validate-error">Title has to be atleast 10 characters</p>
+
+    <label for="content" class="form-content form-label">Content:</label>
+    <textarea id="content" rows="4" cols="50" formControlName="content" class="form-content form-textarea" required></textarea>
+    <div *ngIf="postForm.controls.content.touched && postForm.controls.content.hasError('required')" class="form-content form-validate-error">Content in the blogpost is required.</div>
+
+    <label for="author" class="form-author form-label">Author:</label>
+    <input id="author" formControlName="author" class="form-author form-input">
+
+    <label for="minutesRequired" class="form-minutes-required form-label">Read-time:</label>
+    <div>
+        <input id="minutesRequired" formControlName="minutesRequired" class="form-minutes-required form-input" required>
+        <p> Minuter</p>
+        <div *ngIf="postForm.controls.minutesRequired.touched && postForm.controls.minutesRequired.hasError('min')" class="form-minutes-required form-validate-error">Read-time has to be at least 1 minute.</div>
+        <div *ngIf="postForm.controls.minutesRequired.touched && postForm.controls.minutesRequired.hasError('pattern')" class="form-minutes-required form-validate-error">Read-time can only be numbers.</div>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

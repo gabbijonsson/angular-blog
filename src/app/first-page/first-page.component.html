@@ -1,0 +1,8 @@
+<div>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.content }}</p>
+    <p>Written by: {{ article.author }}</p>
+    <p>Submitted on: {{ toDate(article.datePosted) }}</p>
+    <p>Required time to read: {{ article.minutesRequired }}</p>
+    <button *ngIf="article" (click)="removeArticle(article.articleId)">REMOVE POST</button>
+</div>
